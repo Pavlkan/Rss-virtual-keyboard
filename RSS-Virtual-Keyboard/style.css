@@ -46,24 +46,24 @@ h1, h2, h3, h4, h5, h6 {font-size: inherit; font-weight: 400;}
 
 
 
-.wrapper {
+.main {
     min-height: 100%;
     overflow: hidden;
 }
 
-.keyboard {
+.wrapper {
     padding: 50px 170px;
     
     background-color: rgba(128, 128, 128, 0.114);
 }
 
-.keyboard_input-container {
+.input_container {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
 }
 
-.keyboard_input {
+.input {
     height: 300px;
     width: 100%;
     border: 2px solid rgb(16, 69, 115);
@@ -72,7 +72,7 @@ h1, h2, h3, h4, h5, h6 {font-size: inherit; font-weight: 400;}
     background-color: rgba(240, 248, 255, 0.555);
 }
 
-.keyboard_container {
+.keyboard {
     display: flex;
     flex-direction: column;
     border: 3px solid rgb(16, 69, 115);
@@ -142,4 +142,12 @@ h1, h2, h3, h4, h5, h6 {font-size: inherit; font-weight: 400;}
     letter-spacing: 0.05rem;
 
     background-color: rgb(207, 230, 250);
+}
+
+.keyboard_key-container._active .keyboard_key, .keyboard_key:active {
+    font-size: 110%;
+    letter-spacing: 0.05rem;
+
+    background-color: rgb(14, 51, 84);
+    color: azure;
 }
