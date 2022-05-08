@@ -39,7 +39,9 @@ export class Keyboard {
         if (this.uppercaseMode) {
             this.disableUppercaseMode();
         } else {
-            this.enableUppercaseMode();
+            this.enableUppercaseMode();    
         }
     }
+
+
 }

@@ -24,20 +24,31 @@ export class App {
 
         body.append(this.main);
 
+        this.capsLock = false;
+
         document.addEventListener('keydown', (event) => {
             this.keyboard.find(event.code)?.setActive();
             if (event.code === 'ShiftLeft' || event.code === 'ShiftRight') {
-                this.keyboard.enableUppercaseMode();
+                if (this.capsLock) {
+                    this.keyboard.enableUppercaseMode();
+                } else {
+                    this.keyboard.disableUppercaseMode()
+                }
             }
             if (event.code === 'CapsLock') {
                 this.keyboard.toggleUpperCaseMode();
+                this.capsLock = !this.capsLock;
             }
         })
         
         document.addEventListener('keyup', (event) => {
             this.keyboard.find(event.code)?.setUnactive();
             if (event.code === 'ShiftLeft' || event.code === 'ShiftRight') {
-                this.keyboard.disableUppercaseMode();
+                if (this.capsLock) {
+                    this.keyboard.disableUppercaseMode()
+                } else {
+                    this.keyboard.enableUppercaseMode()
+                }
             }
 
         })
