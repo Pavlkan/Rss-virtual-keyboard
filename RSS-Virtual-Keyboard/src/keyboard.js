@@ -18,7 +18,9 @@ export class Keyboard {
 
         this.uppercaseMode = false;
 
-
+        
+        this.englishLayout = true;
+        
     }
 
     find(keyCode) {
@@ -43,5 +45,22 @@ export class Keyboard {
         }
     }
 
+    isRussianLayout() {
+        this.englishLayout = false;
+        this.keys.forEach((key) => key.toRussianLayout());
+    }
+
+    isEnglishLayout() {
+        this.englishLayout = true;
+        this.keys.forEach((key) => key.toEnglishLayout());
+    }
+
+    toggleLanguage() {
+        if (this.englishLayout) {
+            this.isRussianLayout();
+        } else {
+            this.isEnglishLayout();
+        }
+    }
 
 }

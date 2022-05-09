@@ -9,8 +9,12 @@ export class Key {
             button.classList.add('keyboard_key__dark');
         }
 
+        let currentLanguage = 'eng';
+        
+        
+
         if (this.isInsertButton(this.properties)) {
-            button.textContent = this.properties.eng.key;
+            button.textContent = this.properties[currentLanguage].key;
         } else {
             button.textContent = this.properties.code;
         }
@@ -43,6 +47,8 @@ export class Key {
         }
 
         this.button = button;
+        this.language = currentLanguage;
+
     }
 
     isDarkButton(keyProperties) {
@@ -76,22 +82,66 @@ export class Key {
 
     toUpperCase() {
         if (this.isInsertButton(this.properties)) {
-            this.button.textContent = this.properties.eng.shiftKey;
+            this.button.textContent = this.properties[this.language].shiftKey;
         } 
     }
 
     toLowerCase() {
         if (this.isInsertButton(this.properties)) {
-            this.button.textContent = this.properties.eng.key;
+            this.button.textContent = this.properties[this.language].key;
         } 
     }
 
+    toRussianLayout() {
+        if (this.isInsertButton(this.properties)) {
+            this.language = 'rus';
+            this.button.textContent = this.properties[this.language = 'rus'].key;
+        }
+    }
+
+    toEnglishLayout() {
+        if (this.isInsertButton(this.properties)) {
+            this.language = 'eng';
+            this.button.textContent = this.properties[this.language = 'eng'].key;
+        }
+    }
+}
 
 
 
 
-    
-    // isCapsLockButton (keyProperties) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// isCapsLockButton (keyProperties) {
     //     if (keyProperties.event === 'CapsLock') {
     //         return true;
     //     }
@@ -130,5 +180,3 @@ export class Key {
     //     }
     //     return false;
     // }
-
-}

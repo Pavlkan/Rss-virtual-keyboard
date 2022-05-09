@@ -26,6 +26,8 @@ export class App {
 
         this.capsLock = false;
 
+        // this.language = true;
+
         document.addEventListener('keydown', (event) => {
             this.keyboard.find(event.code)?.setActive();
             if (event.code === 'ShiftLeft' || event.code === 'ShiftRight') {
@@ -39,6 +41,11 @@ export class App {
                 this.keyboard.toggleUpperCaseMode();
                 this.capsLock = !this.capsLock;
             }
+            if (event.code === 'ControlLeft') {
+                this.keyboard.toggleLanguage();
+                // this.language = !this.language;
+            }
+
         })
         
         document.addEventListener('keyup', (event) => {
