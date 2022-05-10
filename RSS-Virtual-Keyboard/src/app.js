@@ -26,7 +26,7 @@ export class App {
         this.footer = document.createElement('div');
         const footer = this.footer;
         footer.classList.add('keyboard_info');
-        footer.textContent = `Клавиатура создана в операционной системе Windows. Для переключения языка комбинация: левыe alt + shift.`;
+        footer.textContent = `Клавиатура создана в операционной системе Windows. Для переключения языка комбинация: левыe alt + shift. Ссылка на pull request: https://github.com/rolling-scopes-school/pavlkan-JSFE2022Q1/pull/22`;
         wrapper.append(footer);
     
 
