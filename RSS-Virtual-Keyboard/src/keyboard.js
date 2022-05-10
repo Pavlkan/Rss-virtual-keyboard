@@ -40,8 +40,10 @@ export class Keyboard {
     toggleUpperCaseMode() {
         if (this.uppercaseMode) {
             this.disableUppercaseMode();
+            this.keys.find((item) => item.properties.code === 'CapsLock').setUnactive();
         } else {
             this.enableUppercaseMode();    
+            this.keys.find((item) => item.properties.code === 'CapsLock').setActive();
         }
     }
 

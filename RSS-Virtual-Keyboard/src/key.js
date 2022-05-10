@@ -10,27 +10,26 @@ export class Key {
         }
 
         let currentLanguage = 'eng';
-        
+        // data-set keyCode add
         
 
         if (this.isInsertButton(this.properties)) {
             button.textContent = this.properties[currentLanguage].key;
         } else {
-            button.textContent = this.properties.code;
+            button.textContent = this.properties.eng.key;
         }
         
 
         this.element.append(button);
 
-        if (this.properties.code === 'Enter') {
+        if (
+            this.properties.code === 'Backspace' 
+            || this.properties.code === 'Enter' 
+            || this.properties.code === 'CapsLock') {
             this.element.classList.add('keyboard_key-container__extra-semi-big-wide');
         }
 
-        if (
-            this.properties.code === 'Backspace' 
-            || this.properties.code === 'CapsLock' 
-            || this.properties.code === 'ShiftLeft'
-            ) {
+        if (this.properties.code === 'ShiftLeft') {
             this.element.classList.add('keyboard_key-container__extra-big-wide');
         }
 
@@ -38,6 +37,11 @@ export class Key {
             this.properties.code === 'Tab' 
             || this.properties.code === 'ControlLeft' 
             || this.properties.code === 'ControlRight'
+            || this.properties.code === 'ArrowUp'
+            || this.properties.code === 'ArrowDown' 
+            || this.properties.code === 'ArrowLeft'
+            || this.properties.code === 'ArrowRight'
+            || this.properties.code === 'ShiftRight'
             ) {
             this.element.classList.add('keyboard_key-container__extra-middle-wide');
         }

@@ -13,7 +13,7 @@ export const KEYBOARD_KEYS_PROPERTIES = [
       }
     },
     {
-      code: 'Numpad1',
+      code: 'Digit1',
       event: 'insert',
       eng: {
         key: '1',
@@ -25,7 +25,7 @@ export const KEYBOARD_KEYS_PROPERTIES = [
       }
     },
     {
-      code: 'Numpad2',
+      code: 'Digit2',
       event: 'insert',
       eng: {
         key: '2',
@@ -37,7 +37,7 @@ export const KEYBOARD_KEYS_PROPERTIES = [
       }
     },
     {
-      code: 'Numpad3',
+      code: 'Digit3',
       event: 'insert',
       eng: {
         key: '3',
@@ -49,7 +49,7 @@ export const KEYBOARD_KEYS_PROPERTIES = [
       }
     },
     {
-      code: 'Numpad4',
+      code: 'Digit4',
       event: 'insert',
       eng: {
         key: '4',
@@ -61,7 +61,7 @@ export const KEYBOARD_KEYS_PROPERTIES = [
       }
     },
     {
-      code: 'Numpad5',
+      code: 'Digit5',
       event: 'insert',
       eng: {
         key: '5',
@@ -73,7 +73,7 @@ export const KEYBOARD_KEYS_PROPERTIES = [
       }
     },
     {
-      code: 'Numpad6',
+      code: 'Digit6',
       event: 'insert',
       eng: {
         key: '6',
@@ -85,7 +85,7 @@ export const KEYBOARD_KEYS_PROPERTIES = [
       }
     },
     {
-      code: 'Numpad7',
+      code: 'Digit7',
       event: 'insert',
       eng: {
         key: '7',
@@ -97,7 +97,7 @@ export const KEYBOARD_KEYS_PROPERTIES = [
       }
     },
     {
-      code: 'Numpad8',
+      code: 'Digit8',
       event: 'insert',
       eng: {
         key: '8',
@@ -109,7 +109,7 @@ export const KEYBOARD_KEYS_PROPERTIES = [
       }
     },
     {
-      code: 'Numpad9',
+      code: 'Digit9',
       event: 'insert',
       eng: {
         key: '9',
@@ -121,7 +121,7 @@ export const KEYBOARD_KEYS_PROPERTIES = [
       }
     },
     {
-      code: 'Numpad0',
+      code: 'Digit0',
       event: 'insert',
       eng: {
         key: '0',
@@ -133,7 +133,7 @@ export const KEYBOARD_KEYS_PROPERTIES = [
       }
     },
     {
-      code: 'NumpadSubtract',
+      code: 'Minus',
       event: 'insert',
       eng: {
         key: '-',
@@ -204,7 +204,7 @@ export const KEYBOARD_KEYS_PROPERTIES = [
       },
       rus: {
         key: 'ц',
-        shiftKey: 'ц',
+        shiftKey: 'Ц',
       }
     },
     {
@@ -340,7 +340,7 @@ export const KEYBOARD_KEYS_PROPERTIES = [
       }
     },
     {
-      code: 'Del',
+      code: 'Delete',
       event: 'erase',
       eng: {
         key: 'Del',
@@ -518,7 +518,7 @@ export const KEYBOARD_KEYS_PROPERTIES = [
       code: 'ShiftLeft',
       event: 'shift',
       eng: {
-        key: 'ShiftLeft',
+        key: 'Shift',
         shiftKey: 'ShiftLeft',
       },
       rus: {
@@ -611,7 +611,7 @@ export const KEYBOARD_KEYS_PROPERTIES = [
       }
     },
     {
-      code: 'NumpadDecimal',
+      code: 'Comma',
       event: 'insert',
       eng: {
         key: ',',
@@ -635,22 +635,34 @@ export const KEYBOARD_KEYS_PROPERTIES = [
       }
     },
     {
+      code: 'Slash',
+      event: 'insert',
+      eng: {
+        key: '/',
+        shiftKey: '?',
+      },
+      rus: {
+        key: '.',
+        shiftKey: ',',
+      }
+    },
+    {
       code: 'ArrowUp',
       event: 'cursorUp',
       eng: {
-        key: 'ArrowUp',
+        key: '\u2191',
         shiftKey: 'ArrowUp',
       },
       rus: {
         key: 'ArrowUp',
-        shiftKey: 'ArrowUpЯ',
+        shiftKey: 'ArrowUp',
       }
     },
     {
       code: 'ShiftRight',
       event: 'shift',
       eng: {
-        key: 'ShiftRight',
+        key: 'Shift',
         shiftKey: 'ShiftRight',
       },
       rus: {
@@ -665,7 +677,7 @@ export const KEYBOARD_KEYS_PROPERTIES = [
       code: 'ControlLeft',
       event: 'control',
       eng: {
-        key: 'ControlLeft',
+        key: 'Ctrl',
         shiftKey: 'ControlLeft',
       },
       rus: {
@@ -677,7 +689,7 @@ export const KEYBOARD_KEYS_PROPERTIES = [
       code: 'MetaLeft',
       event: 'meta',
       eng: {
-        key: 'MetaLeft',
+        key: 'Win',
         shiftKey: 'MetaLeft',
       },
       rus: {
@@ -689,7 +701,7 @@ export const KEYBOARD_KEYS_PROPERTIES = [
       code: 'AltLeft',
       event: 'alt',
       eng: {
-        key: 'AltLeft',
+        key: 'Alt',
         shiftKey: 'AltLeft',
       },
       rus: {
@@ -713,7 +725,7 @@ export const KEYBOARD_KEYS_PROPERTIES = [
       code: 'AltRight',
       event: 'alt',
       eng: {
-        key: 'AltRight',
+        key: 'Alt',
         shiftKey: 'AltRight',
       },
       rus: {
@@ -722,22 +734,22 @@ export const KEYBOARD_KEYS_PROPERTIES = [
       }
     },
     {
-      code: 'ControlLeft',
+      code: 'ControlRight',
       event: 'control',
       eng: {
-        key: 'ControlLeft',
-        shiftKey: 'ControlLeft',
+        key: 'Ctrl',
+        shiftKey: 'ControlRight',
       },
       rus: {
-        key: 'ControlLeft',
-        shiftKey: 'ControlLeft',
+        key: 'ControlRight',
+        shiftKey: 'ControlRight',
       }
     },
     {
       code: 'ArrowLeft',
       event: 'cursorLeft',
       eng: {
-        key: 'ArrowLeft',
+        key: '\u2190',
         shiftKey: 'ArrowLeft',
       },
       rus: {
@@ -749,7 +761,7 @@ export const KEYBOARD_KEYS_PROPERTIES = [
       code: 'ArrowDown',
       event: 'cursorDown',
       eng: {
-        key: 'ArrowDown',
+        key: '\u2193',
         shiftKey: 'ArrowDown',
       },
       rus: {
@@ -761,7 +773,7 @@ export const KEYBOARD_KEYS_PROPERTIES = [
       code: 'ArrowRight',
       event: 'cursorRight',
       eng: {
-        key: 'ArrowRight',
+        key: '\u2192',
         shiftKey: 'ArrowRight',
       },
       rus: {
