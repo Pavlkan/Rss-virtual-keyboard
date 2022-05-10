@@ -74,12 +74,6 @@ export class App {
             } else if (key.properties.event === 'Delete') {
                 selectedTextArea.value = selectedTextArea.value.slice(0, cursorPos) + selectedTextArea.value.slice(cursorPos + 1);
             }
-            
-            // const selectedKeyElementKeyboard = event.target.textContent;
-            // alert(event.target.querySelector('button').dataset.value)
-            
-            // selectedTextArea.value = selectedTextArea.value + selectedKeyElementKeyboard;
-
         })
         
         document.addEventListener('keyup', (event) => {

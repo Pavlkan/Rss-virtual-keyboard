@@ -11,9 +11,7 @@ export class Key {
         
 
         let currentLanguage = 'eng';
-        // data-set keyCode add
-        
-
+       
         if (this.isInsertButton(this.properties)) {
             button.textContent = this.properties[currentLanguage].key;    
         } else if (this.properties.event === 'Enter'|| this.properties.event === 'Tab') {
@@ -114,14 +112,6 @@ export class Key {
         }
     }
 
-    // keyAction(keyProperties, isUpperCase) {
-    //     if (keyProperties.toUpperCase()) {
-    //         return this.properties[this.language].key;
-    //     }
-    //     if (keyProperties.toUpperCase()) {
-    //         return this.properties[this.language].shiftKey;
-    //     }
-    // }
 }
 
 
@@ -131,69 +121,3 @@ export class Key {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// isCapsLockButton (keyProperties) {
-    //     if (keyProperties.event === 'CapsLock') {
-    //         return true;
-    //     }
-    //     return false;
-    // }
-
-    // isEraseButton (keyProperties) {
-    //     if (keyProperties.event === 'erase') {
-    //         return true;
-    //     }
-    //     return false;
-    // }
-
-    // isShiftButton (keyProperties) {
-    //     if (keyProperties.event === 'shift') {
-    //         return true;
-    //     }
-    //     return false;
-    // }
-
-    // isCursorMoveButton (keyProperties) {
-    //     if (
-    //     keyProperties.event === 'cursorUp'
-    //     || keyProperties.event === 'cursorLeft'
-    //     || keyProperties.event === 'cursorDown'
-    //     || keyProperties.event === 'cursorRight'
-    //     ) {
-    //         return true;
-    //     }
-    //     return false;
-    // }
-
-    // isControlButton (keyProperties) {
-    //     if (keyProperties.event === 'control') {
-    //         return true;
-    //     }
-    //     return false;
-    // }
