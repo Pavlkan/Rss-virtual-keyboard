@@ -23,7 +23,12 @@ export class App {
         wrapper.append(this.keyboard.element);
         this.main.append(wrapper);
 
-        this.footer = document.createElement('footer');
+        this.footer = document.createElement('div');
+        const footer = this.footer;
+        footer.classList.add('keyboard_info');
+        footer.textContent = `Клавиатура создана в операционной системе Windows. Для переключения языка комбинация: левыe alt + shift.`;
+        wrapper.append(footer);
+    
 
         body.append(this.main);
 

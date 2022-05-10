@@ -78,6 +78,7 @@ h1, h2, h3, h4, h5, h6 {font-size: inherit; font-weight: 400;}
 
 .keyboard {
     margin: 0 auto;
+    margin-bottom: 20px;
     max-width: 1300px;
     display: flex;
     flex-direction: column;
@@ -157,4 +158,11 @@ h1, h2, h3, h4, h5, h6 {font-size: inherit; font-weight: 400;}
 
     background-color: rgb(14, 51, 84);
     color: azure;
+}
+
+.keyboard_info {
+    margin: 0 auto;
+    font-size: 1.5rem;
+
+    
 }
