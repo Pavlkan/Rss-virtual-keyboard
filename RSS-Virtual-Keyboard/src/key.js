@@ -8,17 +8,21 @@ export class Key {
         if (this.isDarkButton(this.properties)) {
             button.classList.add('keyboard_key__dark');
         }
+        
 
         let currentLanguage = 'eng';
         // data-set keyCode add
         
 
         if (this.isInsertButton(this.properties)) {
-            button.textContent = this.properties[currentLanguage].key;
+            button.textContent = this.properties[currentLanguage].key;    
+        } else if (this.properties.event === 'Enter'|| this.properties.event === 'Tab') {
+            button.textContent = this.properties.code;
         } else {
             button.textContent = this.properties.eng.key;
         }
         
+        button.setAttribute('data-code', [this.properties.code]);
 
         this.element.append(button);
 
@@ -109,6 +113,15 @@ export class Key {
             this.button.textContent = this.properties[this.language = 'eng'].key;
         }
     }
+
+    // keyAction(keyProperties, isUpperCase) {
+    //     if (keyProperties.toUpperCase()) {
+    //         return this.properties[this.language].key;
+    //     }
+    //     if (keyProperties.toUpperCase()) {
+    //         return this.properties[this.language].shiftKey;
+    //     }
+    // }
 }
 
 

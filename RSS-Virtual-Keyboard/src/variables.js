@@ -173,14 +173,14 @@ export const KEYBOARD_KEYS_PROPERTIES = [
   [
     {
       code: 'Tab',
-      event: 'insert',
+      event: 'Tab',
       eng: {
-        key: 'Tab',
-        shiftKey: 'Tab',
+        key: '\u0009',
+        shiftKey: '\u0009',
       },
       rus: {
-        key: 'Tab',
-        shiftKey: 'Tab',
+        key: '\u0009',
+        shiftKey: '\u0009',
       }
     },
     {
@@ -501,14 +501,14 @@ export const KEYBOARD_KEYS_PROPERTIES = [
     },
     {
       code: 'Enter',
-      event: 'insert',
+      event: 'Enter',
       eng: {
-        key: 'Enter',
-        shiftKey: 'Enter',
+        key: '\n',
+        shiftKey: '\n',
       },
       rus: {
-        key: 'Enter',
-        shiftKey: 'Enter',
+        key: '\n',
+        shiftKey: '\n',
       }
     },
   ],
