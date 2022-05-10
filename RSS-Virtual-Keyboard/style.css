@@ -1,0 +1,166 @@
+/* ———————————————————————————————————————————————————————————————————————————————
+==============================—Style—normalizacion—===============================
+——————————————————————————————————————————————————————————————————————————————— */
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*,*:before,*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:focus, :active {outline: none;}
+a:focus, a:active {outline: none;}
+
+nav, footer, header, aside {display: block;}
+
+html, body {
+    height: 100%;
+    width: 100%;
+
+    font-family: 'Arial Regular';
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {font-family: inherit;}
+
+input::-ms-clear {display: none;}
+button {cursor: pointer;}
+button::-moz-focus-inner {padding: 0; border: 0;}
+a, a:visited {text-decoration: none;}
+a:hover {text-decoration: none;}
+ul li {list-style: none;}
+img {vertical-align: top;}
+
+h1, h2, h3, h4, h5, h6 {font-size: inherit; font-weight: 400;}
+
+
+
+.main {
+    min-height: 100%;
+    overflow: hidden;
+}
+
+.wrapper {
+    padding: 50px 170px;
+    
+    background-color: rgba(128, 128, 128, 0.114);
+}
+
+.textarea_container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.textarea {
+    height: 300px;
+    width: 100%;
+    border: 2px solid rgb(16, 69, 115);
+    border-radius: 10px;
+    padding: 20px;
+
+    font-family: inherit;
+    font-size: 2rem;
+
+    background-color: rgba(240, 248, 255, 0.555);
+}
+
+.keyboard {
+    margin: 0 auto;
+    margin-bottom: 20px;
+    max-width: 1300px;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid rgb(16, 69, 115);
+    border-radius: 10px;
+
+    background-color: rgb(236, 246, 255);
+    box-shadow: 0px 2px 15px 4px rgba(13, 13, 13, 0.167);
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.keyboard_key-container {
+    max-width: 60px;
+    width: 100%;
+    height: 50px;
+    margin: 8px 8px;
+    border-radius: 5px;
+
+    transition: 0.2s;
+}
+
+.keyboard_key-container__extra-middle-wide {
+    max-width: 80px;
+    width: 100%;
+}
+
+.keyboard_key-container__extra-semi-big-wide {
+    max-width: 135px;
+    width: 100%;
+}
+
+.keyboard_key-container__extra-big-wide {
+    max-width: 180px;
+    width: 100%;
+}
+
+.keyboard_key-container__space {
+    max-width: 485px;
+    min-width: 300px;
+    width: 100%;
+}
+
+.keyboard_key-container:hover {
+    box-shadow: 0px 2px 15px 4px rgba(13, 13, 13, 0.167);
+}
+
+.keyboard_key {
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgb(16, 69, 115);
+    border-radius: 5px;
+    
+    background-color: aliceblue;
+    box-shadow: 0px 1px 5px 2px rgba(1, 63, 108, 0.094);
+
+    transition: 0.2s;
+}
+
+.keyboard_key__dark {
+    background-color: rgb(155, 188, 218);
+}
+
+.keyboard_key:hover {
+    font-size: 110%;
+    letter-spacing: 0.05rem;
+
+    background-color: rgb(207, 230, 250);
+}
+
+.keyboard_key-container._active .keyboard_key, .keyboard_key:active {
+    font-size: 110%;
+    letter-spacing: 0.05rem;
+
+    background-color: rgb(14, 51, 84);
+    color: azure;
+}
+
+.keyboard_info {
+    margin: 0 auto;
+    font-size: 1.5rem;
+}
