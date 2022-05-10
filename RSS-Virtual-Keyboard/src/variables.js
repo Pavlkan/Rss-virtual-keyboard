@@ -158,7 +158,7 @@ export const KEYBOARD_KEYS_PROPERTIES = [
     },
     {
       code: 'Backspace',
-      event: 'erase',
+      event: 'Backspace',
       eng: {
         key: 'Backspace',
         shiftKey: 'Backspace',
@@ -341,7 +341,7 @@ export const KEYBOARD_KEYS_PROPERTIES = [
     },
     {
       code: 'Delete',
-      event: 'erase',
+      event: 'Delete',
       eng: {
         key: 'Del',
         shiftKey: 'Del',

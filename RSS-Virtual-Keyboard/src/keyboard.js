@@ -27,10 +27,6 @@ export class Keyboard {
         return this.keys.find((item) => item.properties.code === keyCode);
     }
 
-    // findDataSet(keyCode) {
-    //     return this.keys.findDataSet((item) => item.dataset.value === keyCode);
-    // }
-
     enableUppercaseMode() {
         this.uppercaseMode = true;
         this.keys.forEach((key) => key.toUpperCase())

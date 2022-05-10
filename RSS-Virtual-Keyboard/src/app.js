@@ -16,9 +16,8 @@ export class App {
             <textarea class="textarea" type="text" autofocus>
         `;
         const selectedTextArea = textarea.querySelector('textarea');
-        // alert(selectedTextArea)
-        // selectedTextArea.setAttribute('autofocus', 'autofocus');
-
+        selectedTextArea.value = '';
+        
         wrapper.append(textarea);
         this.keyboard = new Keyboard(KEYBOARD_KEYS_PROPERTIES);
         wrapper.append(this.keyboard.element);
@@ -35,7 +34,11 @@ export class App {
 
         document.addEventListener('keydown', (event) => {
             const key = this.keyboard.find(event.code);
-            key?.setActive();
+            if (!key) {
+                return
+            }
+            key.setActive();
+            event.preventDefault();
             if (event.code === 'ShiftLeft' || event.code === 'ShiftRight') {
                 if (!this.capsLock) {
                     this.keyboard.enableUppercaseMode();
@@ -54,9 +57,19 @@ export class App {
             if (this.shift && this.alt) {
                 this.keyboard.toggleLanguage();
             }
-            if (event.code === 'Tab') {
-                selectedTextArea.value = selectedTextArea.value + key.properties.eng.key;
+
+            const cursorPos = selectedTextArea.selectionEnd;
+
+            if (key?.properties.event === 'insert') {
+                selectedTextArea.value = selectedTextArea.value.slice(0, cursorPos) + key.element.textContent + selectedTextArea.value.slice(cursorPos);  
+            } else if (key?.properties.event === 'Enter' || key?.properties.event === 'Tab') {
+                selectedTextArea.value = selectedTextArea.value.slice(0, cursorPos) + key.properties.eng.key + selectedTextArea.value.slice(cursorPos);
+            } else if (key.properties.event === 'Backspace') {
+                selectedTextArea.value = selectedTextArea.value.slice(0, cursorPos - 1) + selectedTextArea.value.slice(cursorPos);
+            } else if (key.properties.event === 'Delete') {
+                selectedTextArea.value = selectedTextArea.value.slice(0, cursorPos) + selectedTextArea.value.slice(cursorPos + 1);
             }
+            
             // const selectedKeyElementKeyboard = event.target.textContent;
             // alert(event.target.querySelector('button').dataset.value)
             
@@ -79,8 +92,7 @@ export class App {
             if(event.code === 'AltLeft') {
                 this.alt = false;
             }
-            selectedTextArea.focus();
-
+            
         })
         
         this.keyboard.element.addEventListener('click', (event) => {
@@ -109,18 +121,19 @@ export class App {
                 this.keyboard.toggleLanguage();
             }
             
+            let cursorPos = selectedTextArea.selectionEnd; 
             if (key.properties.event === 'insert') {
-                selectedTextArea.value = selectedTextArea.value + selectedKeyElement.textContent;  
+                selectedTextArea.value = selectedTextArea.value.slice(0, cursorPos) + selectedKeyElement.textContent + selectedTextArea.value.slice(cursorPos);  
+                selectedTextArea.setSelectionRange(cursorPos + 1, cursorPos + 1);
             } else if (key.properties.event === 'Enter' || key.properties.event === 'Tab') {
-                selectedTextArea.value = selectedTextArea.value + key.properties.eng.key;
+                selectedTextArea.value = selectedTextArea.value.slice(0, cursorPos) + key.properties.eng.key + selectedTextArea.value.slice(cursorPos);
+            } else if (key.properties.event === 'Backspace') {
+                selectedTextArea.value = selectedTextArea.value.slice(0, cursorPos - 1) + selectedTextArea.value.slice(cursorPos);
+            } else if (key.properties.event === 'Delete') {
+                selectedTextArea.value = selectedTextArea.value.slice(0, cursorPos) + selectedTextArea.value.slice(cursorPos + 1);
             }
-             
-        })
-        
-        document.addEventListener('click', (event) => {
             selectedTextArea.focus();
         })
-
     }
 
 }
